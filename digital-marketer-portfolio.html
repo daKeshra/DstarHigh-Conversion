@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Shoyoye Michael | Sales Funnel Specialist</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary: #4a6bff;
+            --secondary: #ff6b4a;
+            --dark: #333;
+            --light: #f8f9fa;
+            --grey: #6c757d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+            /* background-color: var(--light); */
+            background-color: var(--dark);
+
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            color: var(--dark);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+            color: var(--grey);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #3552cc;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-item {
+            margin-left: 30px;
+        }
+        
+        .nav-link {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary);
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(120deg, #e0f2fe 0%, #f0f9ff 100%);
+            margin-top: 76px;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .hero-text {
+            flex: 1;
+            padding-right: 30px;
+        }
+        
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            color: var(--grey);
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 15px;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: white;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .about-image {
+            flex: 1;
+            padding-right: 30px;
+        }
+        
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            width: 100%;
+            height: auto; 
+            /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+        }
+        
+        .stats {
+            display: flex;
+            margin-top: 30px;
+            justify-content: space-between;
+        }
+        
+        .stat-item {
+            text-align: center;
+            flex: 1;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .stat-text {
+            font-size: 1.1rem;
+            color: var(--grey);
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: #f8f9fa;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .service-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        /* Portfolio Section */
+        .portfolio {
+            background-color: white;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .portfolio-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .portfolio-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(74, 107, 255, 0.9);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        .portfolio-title {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .portfolio-category {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: #f8f9fa;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .testimonial-text::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.2;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: var(--grey);
+            font-size: 0.9rem;
+        }
+        
+        /* Funnel Process Section */
+        .process {
+            background-color: white;
+        }
+        
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            padding: 20px 0;
+        }
+        
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background-color: var(--primary);
+            z-index: 1;
+        }
+        
+        .process-step {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 120px;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .step-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: #f8f9fa;
+        }
+        
+        .contact-content {
+            display: flex;
+            gap: 50px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-form {
+            flex: 1;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .contact-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        .contact-text p, .contact-text a {
+            color: var(--grey);
+            text-decoration: none;
+        }
+        
+        .contact-text a:hover {
+            color: var(--primary);
+        }
+        
+        .social-media {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        textarea.form-control {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        
+        .footer-logo span {
+            color: var(--secondary);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .footer-link {
+            margin: 0 15px;
+        }
+        
+        .footer-link a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-link a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .process-steps {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .process-steps::before {
+                width: 3px;
+                height: 100%;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .process-step {
+                margin-bottom: 30px;
+            }
+            
+            .contact-content {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 0;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 76px;
+                flex-direction: column;
+                background-color: white;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 20px 0;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-item {
+                margin: 15px 0;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+            
+            .hero-content,
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .hero-text,
+            .about-text,
+            .about-image {
+                padding: 0;
+                margin-bottom: 30px;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Dstar High<span> Conversion</span></a>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Transform Visitors into Loyal Customers with Strategic Sales Funnels</h1>
+                    <p class="hero-subtitle">I build high-converting sales funnels that drive growth and maximize ROI for digital businesses.</p>
+                    <div class="hero-cta">
+                        <a href="#portfolio" class="btn">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/sales_funnel_nbg.png" alt="Sales Funnel Visualization">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">I help businesses transform their digital presence with data-driven sales funnels that convert.</p>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="shoyoye.png" alt="Olamide Shoyoye - Sales Funnel Specialist">
+                </div>
+                <div class="about-text">
+                    <h3>Hello! I'm Olamide Shoyoye</h3>
+                    <p>With over 5 years of experience in digital marketing, I specialize in creating optimized sales funnels that turn casual visitors into loyal customers.</p>
+                    <p>My approach combines deep analytical insights with creative marketing strategies to build conversion paths that generate predictable revenue for your business.</p>
+                    <p>I've worked with startups, SMBs, and enterprise clients across industries including SaaS, e-commerce, coaching, and professional services to maximize their online conversion rates and ROI.</p>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-number">30+</div>
+                            <div class="stat-text">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2.5M+</div>
+                            <div class="stat-text">Revenue Generated</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">95%</div>
+                            <div class="stat-text">Client Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+        <div class="container">
+            <h2 class="section-title">My Services</h2>
+            <p class="section-subtitle">I offer specialized services to optimize every stage of your customer journey.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">F</div>
+                    <h3 class="service-title">Funnel Strategy & Design</h3>
+                    <p>Custom sales funnel architecture designed to match your business goals, target audience, and conversion objectives.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">L</div>
+                    <h3 class="service-title">Landing Page Optimization</h3>
+                    <p>High-converting landing pages built with persuasive copywriting, strategic design, and psychological triggers.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">E</div>
+                    <h3 class="service-title">Email Automation Sequences</h3>
+                    <p>Targeted email sequences that nurture leads, overcome objections, and guide prospects toward conversion.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">A</div>
+                    <h3 class="service-title">A/B Testing & Optimization</h3>
+                    <p>Data-driven testing and optimization to continuously improve conversion rates and funnel performance.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">C</div>
+                    <h3 class="service-title">Conversion Rate Optimization</h3>
+                    <p>Strategic improvements to your existing funnels to eliminate friction points and maximize conversions.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">A</div>
+                    <h3 class="service-title">Analytics & Reporting</h3>
+                    <p>Comprehensive tracking and reporting to measure funnel performance, ROI, and guide strategic decisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Funnel Process Section -->
+    <section class="process section">
+        <div class="container">
+            <h2 class="section-title">My Funnel Methodology</h2>
+            <p class="section-subtitle">A proven 5-step process to create sales funnels that consistently convert.</p>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h4 class="step-title">Discovery & Strategy</h4>
+                    <p>Defining goals, audience, and unique selling propositions</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h4 class="step-title">Funnel Architecture</h4>
+                    <p>Designing the optimal path to conversion</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h4 class="step-title">Content Creation</h4>
+                    <p>Developing persuasive copy and creative assets</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h4 class="step-title">Implementation</h4>
+                    <p>Building and connecting all funnel elements</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h4 class="step-title">Testing & Scaling</h4>
+                    <p>Optimizing performance and scaling success</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+        <div class="container">
+            <h2 class="section-title">Featured Work</h2>
+            <p class="section-subtitle">Explore some of my most successful sales funnel projects and their results.</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="images/khabar.PNG" alt="E-commerce Sales Funnel" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Food Trial Funnel</h3>
+                        <p class="portfolio-category">Conversion Rate: 27%</p>
+                        <p>Increased conversions by 156% through targeted email sequences and optimized upgrade paths.</p>
+                        <a href="#" class="btn">View Case Study</a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="images/practice.PNG" alt="Hero Sales Funnel" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Product Launch</h3>
+                        <p class="portfolio-category">ROI: 120%</p>
+                        <p>Generated $2.4M in revenue with a multi-stage product launch funnel featuring pre-launch content and tiered offers.</p>
+                        <a href="#" class="btn">View Case Study</a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="images/signature.PNG" alt="Coaching Program Funnel" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Mentorship Funnel</h3>
+                        <p class="portfolio-category">Conversion Rate: 12%</p>
+                        <p>Created a webinar funnel that converted 12% of registrants into over $1,000 program enrollments with a strategic follow-up sequence.</p>
+                        <a href="#" class="btn">View Case Study</a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="images/nassau-bus.PNG" alt="Lead Generation Funnel" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">B2B Lead Generation</h3>
+                        <p class="portfolio-category">Min. Cost Per Lead: $15</p>
+                        <p>Reduced lead acquisition costs by 64% while improving lead quality through targeted content upgrades and qualification sequences.</p>
+                        <a href="#" class="btn">View Case Study</a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="images/yummy.PNG" alt="Upsell Sequence" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Utensils Site Funnel</h3>
+                        <p class="portfolio-category">Member Retention: 87%</p>
+                        <p>Designed an acquisition and onboarding funnel that increased first-year retention rates from 43% to 87%.</p>
+                        <a href="#" class="btn">View Case Study</a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="images/long.PNG" alt="Upsell Sequence" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Upsell Sequence</h3>
+                        <p class="portfolio-category">AOV Increase: 30%</p>
+                        <p>Implemented a strategic upsell sequence that increased average order value by 30% through targeted offers and timing.</p>
+                        <a href="#" class="btn">View Case Study</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- Testimonials Section-->
+    <section class="testimonials section">
+        <div class="container">
+            <h2 class="section-title">Client Success Stories</h2>
+            <p class="section-subtitle">What my clients say about the transformative impact of strategic sales funnels.</p>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Olamide's funnel strategy completely transformed our online course sales. We went from sporadic sales to a predictable, scalable revenue stream.</p>
+                    <div class="testimonial-author">
+                        <img src="/api/placeholder/50/50" alt="Michael Thompson">
+                        <div class="author-info">
+                            <h4>Michael Thompson</h4>
+                            <p>CEO, LearnSmart Academy</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">The conversion optimization techniques implemented in our e-commerce funnel increased our revenue by over 300% in just six months. Absolutely game-changing!</p>
+                    <div class="testimonial-author">
+                        <img src="/api/placeholder/50/50" alt="Sarah Rodriguez">
+                        <div class="author-info">
+                            <h4>Sarah Rodriguez</h4>
+                            <p>Founder, TechStyle Boutique</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Working with Olamide was a turning point for our SaaS startup. Her strategic funnel design helped us improve our trial-to-paid conversion rates dramatically.</p>
+                    <div class="testimonial-author">
+                        <img src="/api/placeholder/50/50" alt="David Chen">
+                        <div class="author-info">
+                            <h4>David Chen</h4>
+                            <p>CTO, CloudSync Solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Ready to optimize your sales funnel and drive measurable growth? Let's connect and discuss your business goals.</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Details</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa fa-envelope"></i></div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <a href="mailto:shoyoyeolamide2199@gmail.com">shoyoyeolamide2199@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa fa-phone"></i></div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+234 705 677 0521</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa fa-map-marker"></i>
+                               </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Lagos, Nigeria</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-media">
+                        <a href="https://www.linkedin.com/in/olamide-shoyoye-3a6875282?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="social-icon"><i class="fa fa-linkedin"></i></a>
+                        <!-- <a href="#" class="social-icon"><i class="fa fa-x"></i></a> -->
+                        <!-- <a href="#" class="social-icon"><i class="fa fa-instagram"></i></a> -->
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <a href="#" class="footer-logo">DStar High<span> Conversion</span></a>
+            
+            <ul class="footer-links">
+                <li class="footer-link"><a href="#about">About</a></li>
+                <li class="footer-link"><a href="#services">Services</a></li>
+                <li class="footer-link"><a href="#portfolio">Portfolio</a></li>
+                <li class="footer-link"><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <p class="copyright">&copy; 2025 Olamide Shoyoye. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when a nav link is clicked
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+    </script>
+</body>
+</html>
+            
