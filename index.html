@@ -272,10 +272,18 @@
             background-color: #f8f9fa;
         }
         
-        .services-grid {
+        /* .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
+        } */
+
+        .services-grid {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 30px;
+
         }
         
         .service-card {
