@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Shoyoye Michael | Sales Funnel Specialist</title>
@@ -38,12 +40,12 @@
         }
         
         .section {
-            padding: 80px 0;
+            padding: 60px 0;
         }
         
         .section-title {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             font-size: 2.5rem;
             color: var(--dark);
         }
@@ -60,7 +62,7 @@
         
         .btn {
             display: inline-block;
-            padding: 12px 30px;
+            padding: 12px 25px;
             background-color: var(--primary);
             color: white;
             border: none;
@@ -69,10 +71,11 @@
             font-weight: 600;
             transition: all 0.3s ease;
             cursor: pointer;
+            text-align: center;
         }
         
         .btn:hover {
-            background-color: #3552cc;
+            background-color: #c99832;
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
@@ -102,7 +105,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            padding: 15px 0;
         }
         
         .logo span img{
@@ -151,6 +154,7 @@
             align-items: center;
             background: linear-gradient(120deg, #e0f2fe 0%, #f0f9ff 100%);
             margin-top: 76px;
+            padding: 40px 0;
         }
         
         .hero-content {
@@ -207,12 +211,11 @@
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
+            gap: 30px;
         }
         
         .about-image {
             flex: 1;
-            padding-right: 30px;
-            margin: 0px;
             min-width: 300px;
         }
         
@@ -243,13 +246,13 @@
             margin-top: 30px;
             justify-content: space-between;
             flex-wrap: wrap;
+            gap: 20px;
         }
         
         .stat-item {
             text-align: center;
             flex: 1;
             min-width: 120px;
-            margin-bottom: 20px;
         }
         
         .stat-number {
@@ -271,7 +274,7 @@
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
         
@@ -314,7 +317,7 @@
         
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
         
@@ -324,6 +327,7 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
+            height: 250px;
         }
         
         .portfolio-item:hover {
@@ -332,7 +336,7 @@
         
         .portfolio-image {
             width: 100%;
-            height: auto;
+            height: 100%;
             object-fit: cover;
         }
         
@@ -342,7 +346,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(74, 107, 255, 0.9);
+            background-color: rgba(229, 176, 59, 0.9);
             color: white;
             display: flex;
             flex-direction: column;
@@ -375,7 +379,7 @@
         
         .testimonial-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
         
@@ -384,6 +388,7 @@
             border-radius: 10px;
             padding: 30px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
         }
         
         .testimonial-text {
@@ -436,14 +441,16 @@
             position: relative;
             padding: 20px 0;
             flex-wrap: wrap;
+            gap: 30px;
         }
         
         .process-step {
             position: relative;
             z-index: 2;
             text-align: center;
-            width: 120px;
-            margin: 0 auto 30px;
+            flex: 1;
+            min-width: 150px;
+            margin-bottom: 20px;
         }
         
         .step-number {
@@ -592,8 +599,8 @@
         }
         
         .footer-logo span img {
-            width: 200px;
-            height: 45px;
+            max-width: 200px;
+            height: auto;
         }
         
         .footer-links {
@@ -602,6 +609,7 @@
             list-style: none;
             margin: 20px 0;
             flex-wrap: wrap;
+            gap: 15px;
         }
         
         .footer-link {
@@ -625,44 +633,39 @@
         
         /* Responsive Design */
         @media (max-width: 992px) {
+            .section {
+                padding: 50px 0;
+            }
+            
             .hero-title {
                 font-size: 2.5rem;
             }
             
-            .process-steps {
-                flex-direction: column;
-                align-items: center;
+            .section-title {
+                font-size: 2rem;
             }
             
-            .process-step {
-                margin-bottom: 30px;
+            .hero-content, .about-content {
+                gap: 40px;
+            }
+            
+            .hero-text, .about-text {
+                padding-right: 0;
             }
         }
         
         @media (max-width: 768px) {
+            .section {
+                padding: 40px 0;
+            }
+            
+            .hero {
+                margin-top: 69px;
+                padding: 30px 0;
+            }
+            
             .navbar {
-                padding: 15px 0;
-            }
-            
-            .nav-menu {
-                position: fixed;
-                left: -100%;
-                top: 76px;
-                flex-direction: column;
-                background-color: white;
-                width: 100%;
-                text-align: center;
-                transition: 0.3s;
-                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-                padding: 20px 0;
-            }
-            
-            .nav-menu.active {
-                left: 0;
-            }
-            
-            .nav-item {
-                margin: 15px 0;
+                padding: 12px 0;
             }
             
             .hamburger {
@@ -681,36 +684,27 @@
                 transform: translateY(-8px) rotate(-45deg);
             }
             
-            .section {
-                padding: 60px 0;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .hero-text, 
-            .about-text {
-                padding-right: 0;
-                margin-bottom: 30px;
-            }
-            
-            .about-image {
-                padding-right: 0;
-                margin-bottom: 30px;
-            }
-            
-            .hero-cta {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 69px;
                 flex-direction: column;
-                align-items: flex-start;
+                background-color: white;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 20px 0;
             }
             
-            .hero-cta .btn {
-                margin-bottom: 15px;
+            .nav-menu.active {
+                left: 0;
             }
-        }
-        
-        @media (max-width: 480px) {
+            
+            .nav-item {
+                margin: 15px 0;
+            }
+            
             .hero-title {
                 font-size: 2rem;
             }
@@ -719,21 +713,71 @@
                 font-size: 1.1rem;
             }
             
+            .hero-cta {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            
             .section-title {
                 font-size: 1.8rem;
+                margin-bottom: 30px;
+            }
+            
+            .section-subtitle {
+                font-size: 1rem;
             }
             
             .about-text h3 {
+                font-size: 1.6rem;
+            }
+            
+            .process-steps {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .process-step {
+                width: 100%;
+                max-width: 250px;
+            }
+            
+            .contact-content {
+                gap: 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .section {
+                padding: 30px 0;
+            }
+            
+            .hero-title {
                 font-size: 1.8rem;
             }
             
-            .stat-number {
-                font-size: 2.2rem;
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .stats {
+                flex-direction: column;
             }
             
             .stat-item {
-                flex: 100%;
-                margin-bottom: 15px;
+                margin-bottom: 20px;
+            }
+            
+            .portfolio-title {
+                font-size: 1.4rem;
+            }
+            
+            .process-step {
+                max-width: 100%;
             }
         }
     </style>
@@ -915,46 +959,6 @@
                         <h3 class="portfolio-title">Food Trial Funnel</h3>
                         <p class="portfolio-category">Conversion Rate: 27%</p>
                         <p>Increased conversions by 156% through targeted email sequences and optimized upgrade paths.</p>
-                        <a href="#" class="btn">View Case Study</a>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="images/practice.PNG" alt="Hero Sales Funnel" class="portfolio-image">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Product Launch</h3>
-                        <p class="portfolio-category">ROI: 120%</p>
-                        <p>Generated $2.4M in revenue with a multi-stage product launch funnel featuring pre-launch content and tiered offers.</p>
-                        <a href="#" class="btn">View Case Study</a>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="images/signature.PNG" alt="Coaching Program Funnel" class="portfolio-image">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Mentorship Funnel</h3>
-                        <p class="portfolio-category">Conversion Rate: 12%</p>
-                        <p>Created a webinar funnel that converted 12% of registrants into over $1,000 program enrollments with a strategic follow-up sequence.</p>
-                        <a href="#" class="btn">View Case Study</a>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="images/nassau-bus.PNG" alt="Lead Generation Funnel" class="portfolio-image">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">B2B Lead Generation</h3>
-                        <p class="portfolio-category">Min. Cost Per Lead: $15</p>
-                        <p>Reduced lead acquisition costs by 64% while improving lead quality through targeted content upgrades and qualification sequences.</p>
-                        <a href="#" class="btn">View Case Study</a>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="images/yummy.PNG" alt="Upsell Sequence" class="portfolio-image">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Utensils Site Funnel</h3>
-                        <p class="portfolio-category">Member Retention: 87%</p>
-                        <p>Designed an acquisition and onboarding funnel that increased first-year retention rates from 43% to 87%.</p>
                         <a href="#" class="btn">View Case Study</a>
                     </div>
                 </div>
