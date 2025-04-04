@@ -151,11 +151,12 @@
         
         /* Hero Section */
         .hero {
-            min-height: 100vh;
+            /* min-height: 100vh; */
             display: flex;
             align-items: center;
             background: linear-gradient(120deg, #e0f2fe 0%, #f0f9ff 100%);
             margin-top: 76px;
+            padding: 48px 0;
         }
         
         .hero-content {
@@ -633,6 +634,7 @@
         
         /* Responsive Design */
         @media (max-width: 992px) {
+            
             .hero-title {
                 font-size: 3rem;
             }
@@ -728,6 +730,55 @@
             .stats {
                 flex-direction: column;
                 gap: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem; /* Reduce font size for smaller screens */
+    }
+
+    .hero-content {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center; /* Center-align text */
+    }
+
+    .hero-image img {
+        max-width: 80%; /* Scale down images */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; /* Adjust base font size */
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-image img {
+        width: 100%;
+    }
+}
+
+        @media (max-width: 400px) {
+            .hero-title {
+                font-size: 1.8rem; /* Further reduce font size */
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem; /* Reduce subtitle font size */
+            }
+            
+            .btn {
+                padding: 10px 20px; /* Adjust button padding */
+                font-size: 0.9rem; /* Reduce button font size */
             }
         }
     </style>
